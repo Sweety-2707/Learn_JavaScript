@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+<body>
+    <script>
+        let a=prompt("Enter your age");
+        console.log(typeof a); //string 
+        a=Number.parseInt(a);  //string to int conversion
+        
+        if(a>0){
+            alert("Valid age");
+        }
+        else if(a<0){
+            alert("Invalid age");
+        }
+        else{
+            alert("Enter age");
+        }
+    </script>
+</body>
+</html>

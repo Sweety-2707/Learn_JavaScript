@@ -34,3 +34,6 @@ console.log("a<=c",a<=c);
 console.log("a==b and a==c",a==b && d==c);  //and operator
 console.log("a==b or a==c",a==b || d==c);   //o operator
 console.log("!true",!true);   //not operator
+
+//ternary operator
+console.log("a>b",a>b?"yes":"no");
