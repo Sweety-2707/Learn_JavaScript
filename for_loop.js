@@ -8,7 +8,14 @@ let obj={
     saloni:80,
     sonam:78
 }
+
+//for loop for object
+console.log("for loop")
+for(let i=0;i<Object.keys(obj).length;i++){
+    console.log("Marks of "+Object.keys(obj)[i]+ " is: "+obj[Object.keys(obj)[i]])
+}
 //for-in loop
+console.log("for-in loop")
 for(let o in obj){
     console.log("Marks of "+o+ " is: "+obj[o]);
 }
