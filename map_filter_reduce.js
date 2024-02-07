@@ -17,7 +17,9 @@ let arr2=arr.filter(lessthenTen)  //return array which contain num return by les
 console.log(arr2)
 
 //Array reduce method
-let arr3=arr.reduce(sum=(x,y)=>{
+let arr3=arr.reduce((x,y)=>{
     return x+y
 })
 console.log(arr3)
+
+
