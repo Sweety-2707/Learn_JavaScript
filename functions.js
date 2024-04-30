@@ -1,6 +1,7 @@
-sum(2,3)
+// sum(2,3)   // it will show error as sum is not declared before
 
 //creating function
+//hoisting
 let sum=(a,b)=>{
     console.log("Sum of "+a+" and "+b+" is:")
     return a+b

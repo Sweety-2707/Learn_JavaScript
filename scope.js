@@ -1,6 +1,4 @@
 
-//hoisting 
-
 function func1(){
     username="Sweety"
     function func2(){
