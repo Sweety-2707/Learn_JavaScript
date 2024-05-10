@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD, EDIT & DELETE || DOM</title>
+</head>
+<body>
+    <h1>Languages</h1>
+    <ul class="mainlist">
+        <li class="list">JavaScript</li>
+    </ul>
+</body>
+<script>
+
+    function addListElement( lang ) {
+        const main = document.querySelector('.mainlist')
+        const newElement = document.createElement('li')
+        // newElement.innerHTML = `${lang}`
+        newElement.appendChild(document.createTextNode(`${lang}`))    // optimized way
+        main.append(newElement)
+    }
+
+    addListElement("Pyhton")
+    addListElement("Java")
+    addListElement("Ruby")
+
+
+    function editListElement( n , lang){
+        const node = document.querySelector(`li:nth-child(${n})`)
+        // node.outerHTML = `<li>${lang}</li>`
+        const newElement = document.createElement('li')
+        newElement.appendChild(document.createTextNode(`${lang}`))
+        node.replaceWith(newElement)
+    }
+
+    editListElement(1,"TypeScript")
+
+    function removeListElement(n){
+        const node = document.querySelector(`li:nth-child(${n})`)
+        node.remove()
+    }
+    removeListElement(3)
+
+</script>
+
+
+</html>

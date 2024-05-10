@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="main">
+        <div class="sub">One</div>
+        <div class="sub" id="2">Two</div>
+        <div class="sub">Three</div>
+        <div class="sub">Four</div>
+    </div>
+
+    
+</body>
+<script>
+
+// console.log(document.getElementById('2').innerHTML);
+
+const sub = document.getElementsByClassName('sub')[0].innerHTML
+console.log(sub);
+
+
+const main = document.querySelector('.main')
+// console.log(main)
+// console.log(main.firstElementChild.innerHTML)
+const child = document.createElement('div')
+// child.className='sub'
+child.setAttribute('class','sub');
+child.innerHTML='Five'
+child.style.backgroundColor='green'
+main.append(child)
+// console.log(main.lastElementChild);
+
+const main1 = document.createTextNode("Main Node");
+document.body.append(main1)
+
+</script>
+</html>
