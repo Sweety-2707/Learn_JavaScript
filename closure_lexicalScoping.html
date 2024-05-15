@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure & Lexical Scoping</title>
+</head>
+<body>
+    <button id="grey">Grey</button>
+    <button id="aqua">Aqua</button>
+    
+</body>
+<script>
+    function colorHandler(color){
+        return function(){
+
+            // color is accessible in this scope due to closure
+            document.body.style.backgroundColor=`${color}`;
+        }
+    }
+
+    document.getElementById('grey').addEventListener('click',colorHandler('grey'))
+    // colorHandler return a function and its whole lexical scope including color variable
+    // if function do not return a function then it get executed whether button is clicked or not
+    document.getElementById('aqua').addEventListener('click',colorHandler('aqua'))
+</script>
+</html>

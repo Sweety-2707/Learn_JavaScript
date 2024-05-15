@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind</title>
+</head>
+<body>
+    <button class="btn">Click Here!</button>
+</body>
+<script>
+    class User{
+        constructor(){
+            this.username="Sweety"
+            this.email="sweety@gmail.com"
+            // document.querySelector('.btn').addEventListener('click',this.welcome)   // this in function refer to button if binding is not done
+            document.querySelector('button').addEventListener('click',this.welcome.bind(this))
+        }
+
+
+        welcome(){
+            console.log(`Welcome ${this.username}`);
+            console.log(this);
+        }
+
+        
+    }
+
+    const user1=new User();
+</script>
+</html>
